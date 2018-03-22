@@ -23,7 +23,15 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+My pipeline consisted of 5 steps as follows:
+
+  1. Convert the original image to gray image.
+  2. Apply Gaussian blurring to the gray image to make it more smooth for canny algorithm to detect the edges.
+  3. Apply Canny function to convert gray image to edges detected based on derivative of intensity at each pixel.
+  4. Passing the image edges through region masking function to get only the region of interest (area between the two lanes).
+  5. Apply HoughLinesP function to detect lines (on left and right side) from the masked image by tuning the input parameters.
+  6. Finally 
+
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
