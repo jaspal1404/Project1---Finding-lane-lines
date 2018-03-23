@@ -40,17 +40,16 @@ In order to draw a single line on the left and right lanes, I modified the draw_
   3. Calculated average slope for all the lines and one centroid (average sum of x and y corrdinates of the lines) to form a line equation.
   4. Finally using slope and center coordinate, calculated x-coordinate of the two endpoints of the final lane line (passed y-coordinate from the vertices of masking region for both the lanes).
   
+  
 Further tuning of parameters:
 
 1. After modifying the draw_lines() function, I got nice 2 single lines (left and right) but they were not aligned with the actual lanes. So I had to tune the hough parameters and ranges of slopes to fix it, but it didnt help much as there were lot of combinations to test.
 2. I then thought of running a error calc function to calculate slope deviation of my lines from the actual lane lines for different combinations of hyperparamters (like canny, hough parameters).
 3. Exported the results into a file and looked at the values where the deviation was minimum (almost close to zero).
-4. Tehn used that combination as inputs to my function to get the lane detection to working.
+4. Then used that combination as inputs to my function to get the lane detection to working.
 
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
-![alt text][image1]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
